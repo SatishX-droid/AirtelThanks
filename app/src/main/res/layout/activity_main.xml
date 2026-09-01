@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp">
+
+        <LinearLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:background="#2C2C3E" 
+                android:orientation="vertical" 
+                android:padding="16dp">
+
+                <LinearLayout 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:gravity="center_vertical" 
+                    android:orientation="horizontal">
+
+                    <ImageView 
+                        android:layout_width="40dp" 
+                        android:layout_height="40dp" 
+                        android:src="@drawable/ic_profile" 
+                        android:background="@drawable/circle_bg" 
+                        android:padding="8dp"/>
+
+                    <LinearLayout 
+                        android:layout_width="0dp" 
+                        android:layout_height="wrap_content" 
+                        android:layout_weight="1" 
+                        android:orientation="vertical" 
+                        android:gravity="center" 
+                        android:layout_marginHorizontal="16dp">
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="manage" 
+                            android:textColor="#FFFFFF" 
+                            android:textSize="20sp" 
+                            android:textStyle="bold"/>
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="plans and accounts" 
+                            android:textColor="#AAAAAA" 
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <ImageView 
+                        android:layout_width="40dp" 
+                        android:layout_height="40dp" 
+                        android:src="@drawable/ic_notification" 
+                        android:padding="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Cards -->
+            <LinearLayout 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:orientation="horizontal" 
+                android:padding="16dp" 
+                android:weightSum="2">
+
+                <!-- Services Card -->
+                <androidx.cardview.widget.CardView 
+                    android:layout_width="0dp" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="1" 
+                    android:layout_marginEnd="8dp" 
+                    app:cardCornerRadius="16dp" 
+                    app:cardElevation="4dp" 
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:orientation="vertical" 
+                        android:padding="16dp">
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="SERVICES" 
+                            android:textColor="#888888" 
+                            android:textSize="11sp" 
+                            android:textStyle="bold"/>
+
+                        <ImageView 
+                            android:layout_width="80dp" 
+                            android:layout_height="100dp" 
+                            android:layout_gravity="center" 
+                            android:layout_marginTop="8dp" 
+                            android:src="@drawable/img_phone_hand"/>
+
+                        <TextView 
+                            android:layout_width="match_parent" 
+                            android:layout_height="wrap_content" 
+                            android:layout_marginTop="8dp" 
+                            android:background="#000000" 
+                            android:gravity="center" 
+                            android:padding="12dp" 
+                            android:text="PORT TO AIRTEL" 
+                            android:textColor="#FFFFFF" 
+                            android:textSize="12sp" 
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Money Card -->
+                <androidx.cardview.widget.CardView 
+                    android:id="@+id/balance_card" 
+                    android:layout_width="0dp" 
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="1" 
+                    android:layout_marginStart="8dp" 
+                    app:cardCornerRadius="16dp" 
+                    app:cardElevation="4dp" 
+                    app:cardBackgroundColor="#FFE4E1">
+
+                    <LinearLayout 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:orientation="vertical" 
+                        android:padding="16dp">
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="MONEY" 
+                            android:textColor="#888888" 
+                            android:textSize="11sp" 
+                            android:textStyle="bold"/>
+
+                        <TextView 
+                            android:id="@+id/tv_balance" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:layout_marginTop="8dp" 
+                            android:text="₹37150.40" 
+                            android:textColor="#333333" 
+                            android:textSize="24sp" 
+                            android:textStyle="bold"/>
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="in your savings" 
+                            android:textColor="#666666" 
+                            android:textSize="14sp"/>
+
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" 
+                            android:text="account" 
+                            android:textColor="#666666" 
+                            android:textSize="14sp"/>
+
+                        <ImageView 
+                            android:layout_width="60dp" 
+                            android:layout_height="60dp" 
+                            android:layout_gravity="end" 
+                            android:layout_marginTop="8dp" 
+                            android:src="@drawable/img_safe"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Banner -->
+            <androidx.cardview.widget.CardView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_marginHorizontal="16dp" 
+                android:layout_marginBottom="16dp" 
+                app:cardCornerRadius="16dp" 
+                app:cardElevation="4dp">
+
+                <LinearLayout 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2 
+                        android:id="@+id/banner_viewpager" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="160dp"/>
+
+                    <LinearLayout 
+                        android:id="@+id/dots_indicator" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:orientation="horizontal" 
+                        android:gravity="center" 
+                        android:padding="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Buy New Service -->
+            <androidx.cardview.widget.CardView 
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_marginHorizontal="16dp" 
+                android:layout_marginBottom="16dp" 
+                app:cardCornerRadius="16dp" 
+                app:cardElevation="4dp" 
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:orientation="vertical" 
+                    android:padding="16dp">
+
+                    <TextView 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="BUY NEW SERVICE" 
+                        android:textColor="#8888AA" 
+                        android:textSize="14sp" 
+                        android:textStyle="bold"/>
+
+                    <LinearLayout 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:orientation="horizontal" 
+                        android:layout_marginTop="16dp" 
+                        android:weightSum="4">
+
+                        <LinearLayout 
+                            android:id="@+id/icon_broadband" 
+                            android:layout_width="0dp" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1" 
+                            android:orientation="vertical" 
+                            android:gravity="center" 
+                            android:clickable="true">
+
+                            <ImageView 
+                                android:layout_width="50dp" 
+                                android:layout_height="50dp" 
+                                android:src="@drawable/ic_broadband" 
+                                android:background="@drawable/circle_light" 
+                                android:padding="12dp"/>
+
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:layout_marginTop="8dp" 
+                                android:text="broadband" 
+                                android:textColor="#666666" 
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout 
+                            android:id="@+id/icon_postpaid" 
+                            android:layout_width="0dp" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1" 
+                            android:orientation="vertical" 
+                            android:gravity="center" 
+                            android:clickable="true">
+
+                            <ImageView 
+                                android:layout_width="50dp" 
+                                android:layout_height="50dp" 
+                                android:src="@drawable/ic_postpaid" 
+                                android:background="@drawable/circle_light" 
+                                android:padding="12dp"/>
+
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:layout_marginTop="8dp" 
+                                android:text="postpaid" 
+                                android:textColor="#666666" 
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout 
+                            android:id="@+id/icon_dth" 
+                            android:layout_width="0dp" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1" 
+                            android:orientation="vertical" 
+                            android:gravity="center" 
+                            android:clickable="true">
+
+                            <ImageView 
+                                android:layout_width="50dp" 
+                                android:layout_height="50dp" 
+                                android:src="@drawable/ic_dth" 
+                                android:background="@drawable/circle_light" 
+                                android:padding="12dp"/>
+
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:layout_marginTop="8dp" 
+                                android:text="dth" 
+                                android:textColor="#666666" 
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout 
+                            android:id="@+id/icon_prepaid" 
+                            android:layout_width="0dp" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1" 
+                            android:orientation="vertical" 
+                            android:gravity="center" 
+                            android:clickable="true">
+
+                            <FrameLayout 
+                                android:layout_width="50dp" 
+                                android:layout_height="50dp">
+
+                                <ImageView 
+                                    android:layout_width="50dp" 
+                                    android:layout_height="50dp" 
+                                    android:src="@drawable/ic_prepaid" 
+                                    android:background="@drawable/circle_light" 
+                                    android:padding="12dp"/>
+
+                                <ImageView 
+                                    android:layout_width="16dp" 
+                                    android:layout_height="16dp" 
+                                    android:layout_gravity="top|end" 
+                                    android:src="@drawable/ic_sparkle"/>
+                            </FrameLayout>
+
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:layout_marginTop="8dp" 
+                                android:text="prepaid" 
+                                android:textColor="#666666" 
+                                android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView 
+                        android:id="@+id/btn_home_delivery" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginTop="16dp" 
+                        android:background="#FF0000" 
+                        android:gravity="center" 
+                        android:padding="14dp" 
+                        android:text="🎁 Home Delivery of SIM" 
+                        android:textColor="#FFFFFF" 
+                        android:textSize="14sp" 
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View android:layout_width="match_parent" android:layout_height="80dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView 
+        android:id="@+id/bottom_navigation" 
+        android:layout_width="match_parent" 
+        android:layout_height="70dp" 
+        android:layout_gravity="bottom" 
+        android:background="#FFFFFF" 
+        app:menu="@menu/bottom_nav_menu"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
